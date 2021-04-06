@@ -1,0 +1,35 @@
+## General pipeline parameters:
+# Name of the pipeline:
+pipeline: "Pausing Site Detection Pipeline"
+# Repository URL:
+repo: ""
+
+## Pipeline-specific parameters
+#bedGraph files should be in "Data" folder
+sample:
+  neg: "samplename.neg.bedGraph"
+  pos: "samplename.pos.bedGraph"
+
+prefix: "samplename"
+
+#bed6 file with regions to mask eg. chrY for female cell line
+#full path necessary
+mask_bed: "masked.bed"
+
+#bed6 files used to assign peaks to regions
+#full path necessary
+region_bed: "Regions.bed"
+
+#size of the window used to calculate the local read density
+window_size: 200
+
+#minimal number of reads to call a peak
+minimum_intensity: 5
+
+#
+include_spikes: FALSE
+
+bootstrap_N: 10000
+
+#
+percentile: 95
