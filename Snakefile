@@ -77,7 +77,7 @@ rule FilterPeaks:
         "Results/Significant_{prefix}.bed",
         "Results/All_{prefix}.bed"
     params:
-        config["percentile"]
+        config["padj"]
     script:
         "Scripts/filterPausing.py"
 

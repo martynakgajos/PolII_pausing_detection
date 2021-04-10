@@ -26,10 +26,12 @@ window_size: 200
 #minimal number of reads to call a peak
 minimum_intensity: 5
 
-#
+#should reads with no supporting density in the window be included
 include_spikes: FALSE
 
+#number of redistributions of reads done to obtain the distribution of
+#the expected maximum
 bootstrap_N: 10000
 
-#
-percentile: 95
+#adjusted pvalue required to report as significant
+padj: 0.05
